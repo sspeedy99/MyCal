@@ -1,29 +1,29 @@
-<mat-card class="login">
-  <mat-card-header>Log in</mat-card-header>
-  <mat-card-content>
-    <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)">
-      <mat-form-field appearance="outline">
-        <mat-label>Username</mat-label>
-        <input matInput formControlName="username">
-        <mat-error *ngIf="loginForm.get('username').hasError('required')">
-          Username is required
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input type="password" matInput formControlName="password">
-        <mat-error *ngIf="loginForm.get('password').hasError('required')">
-          Password is required
-        </mat-error>
-      </mat-form-field>
-      <span class="remember-me">
-        <mat-checkbox (change)="shouldRemember = !shouldRemember">Remember me</mat-checkbox>
-      </span>
-      <button mat-raised-button type="submit" class="submit" color="primary">Log In</button>
-    </form>
-  </mat-card-content>
-  <mat-card-footer class="footer">
-    Don't have an account?
-    <span class="reg-link" [routerLink]="['/register']">Register</span>.
-  </mat-card-footer>
-</mat-card>
+  <mat-card class="login">
+    <mat-card-header>Log in</mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)">
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username">
+          <mat-error *ngIf="loginForm.get('username').hasError('required')">
+            Username is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password">
+          <mat-error *ngIf="loginForm.get('password').hasError('required')">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+        <span class="remember-me">
+          <mat-checkbox (change)="shouldRemember = !shouldRemember">Remember me</mat-checkbox>
+        </span>
+        <button mat-raised-button type="submit" class="submit" color="primary">Log In</button>
+      </form>
+    </mat-card-content>
+    <mat-card-footer class="footer">
+      Don't have an account?
+      <span class="reg-link" [routerLink]="['/register']">Register</span>.
+    </mat-card-footer>
+  </mat-card>
